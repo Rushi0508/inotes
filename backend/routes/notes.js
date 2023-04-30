@@ -2,7 +2,10 @@ const express = require("express");
 const router = express.Router({mergeParams: true});
 
 router.get("/", (req,res)=>{
-    res.send("Hello");
+    const obj = {
+        a: 12
+    }
+    res.json(obj)
 })
 
 module.exports = router;

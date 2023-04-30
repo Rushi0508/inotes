@@ -15,8 +15,9 @@ const port = 3000;
 const authRoutes = require("./routes/auth");
 const notesRoutes = require("./routes/notes");
 
+app.use(express.json());
 app.use("/api/auth", authRoutes);
-app.use("api/notes", notesRoutes);
+app.use("/api/notes", notesRoutes);
 
 app.listen(port, ()=>{
     console.log("Connected to 3000");
